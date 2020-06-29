@@ -26,11 +26,11 @@ public class OrderServiceImpl implements OrderServiceInterface {
     }
 
     @Override
-    public void insertOrder(Orders order) throws MarketPlacerException {
+    public Boolean insertOrder(Orders order) throws MarketPlacerException {
         order.setShippingStatus(Boolean.TRUE);
-        System.out.println(order.toString());
         order.setTotalAmount(invoicing(order.getProducts()));
         ordersRepository.save(order);
+        return Boolean.TRUE;
     }
 
     private Double invoicing(List<Products> products) throws MarketPlacerException {

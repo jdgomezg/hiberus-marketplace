@@ -19,9 +19,10 @@ public interface OrderServiceInterface {
      * persist an order
      *
      * @param order data to persist
+     * @return @{@link Boolean}
      * @throws MarketPlacerException
      */
-    public void insertOrder(Orders order) throws MarketPlacerException;
+    public Boolean insertOrder(Orders order) throws MarketPlacerException;
 
 
     /**
