@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "a321e6b3-45b6-4d8b-94a0-12b91a44f62e",
+		"name": "hiberus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"date\": \"2020-06-28\",\r\n        \"direction\": \"cra 48 # 76D Sur 34 apto 1909 Sabaneta Colombia\",\r\n        \"products\": [\r\n            {\r\n                \"quantity\": 12,\r\n                \"cost\": 2.0\r\n            },\r\n            {\r\n                \"quantity\": 2,\r\n                \"cost\": 2.0\r\n            }\r\n        ]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/marketplace/createOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"marketplace",
+						"createOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOrders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/marketplace/getOrders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"marketplace",
+						"getOrders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOrderById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/marketplace/getOrderById/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"marketplace",
+						"getOrderById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
